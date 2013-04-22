@@ -1,0 +1,6 @@
+apt-get purge nvidia*
+apt-get install --reinstall xserver-xorg-video-intel  libgl1-mesa-glx libgl1-mesa-dri xserver-xorg-core
+dpkg-reconfigure xserver-xorg
+update-alternatives --remove gl_conf /usr/lib/nvidia-current/ld.so.conf
+echo export LIBGL_ALWAYS_SOFTWARE=1 >> /home/argo/.bashrc
+echo no te olvides de recongelar
